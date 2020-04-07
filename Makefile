@@ -1,7 +1,7 @@
 CC=g++
 prom = main
-deps = process_schedule.h
-obj = main.o process_schedule.o
+deps = ServerConnect.h
+obj = main.o ServerConnect.o
 
 $(prom): $(obj)
 	$(CC) -o $(prom) $(obj)
