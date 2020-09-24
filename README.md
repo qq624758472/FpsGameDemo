@@ -1,1 +1,2 @@
 # FpsServer
+init
