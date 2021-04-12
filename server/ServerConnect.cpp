@@ -17,6 +17,8 @@
 #include "ServerConnect.h"
 using namespace std;
 
+extern _playerLocation ClientInfo[MAXPEOPLE];
+
 ServerConnect::ServerConnect()
 {
 }
@@ -114,7 +116,7 @@ int ServerConnect::ServerSocketInit()
                     }
                 }
             }
-            OtherPlayerlocation clientPosion;
+            playerLocation clientPosion;
             char recvbuf[1024] = {0};
             char sendbuf[1024] = {0};
             //int nNetTimeout=1000;//1秒，设置接收超时时间。

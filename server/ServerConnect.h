@@ -1,4 +1,7 @@
 
+#ifndef _SERVERCONNECT_H_
+#define _SERVERCONNECT_H_
+
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,12 +20,15 @@
 using namespace std;
 
 
-//该结构体发送的是玩家位置。
-typedef struct _OtherPlayerlocation
+#define MAXPEOPLE 10
+
+//该结构体保存的位置。
+typedef struct _playerLocation
 {
     float x; //x轴世界坐标。
     float z; //y轴世界坐标。
-}OtherPlayerlocation;
+}playerLocation;
+
 
 
 
@@ -43,3 +49,4 @@ public:
     int max_fd(int a[], int n);
 };
 
+#endif
