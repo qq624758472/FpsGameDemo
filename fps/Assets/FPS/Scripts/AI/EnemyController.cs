@@ -10,6 +10,7 @@ namespace Unity.FPS.AI
     public class EnemyController : MonoBehaviour
     {
         [System.Serializable]
+        //渲染器索引数据
         public struct RendererIndexData
         {
             public Renderer Renderer;
@@ -23,6 +24,7 @@ namespace Unity.FPS.AI
         }
 
         [Header("Parameters")]
+        //自动杀死敌人的Y高度（如果它从水平面上掉下来）
         [Tooltip("The Y height at which the enemy will be automatically killed (if it falls off of the level)")]
         public float SelfDestructYHeight = -20f;
 
@@ -32,7 +34,7 @@ namespace Unity.FPS.AI
         [Tooltip("The speed at which the enemy rotates")]
         public float OrientationSpeed = 10f;
 
-        [Tooltip("Delay after death where the GameObject is destroyed (to allow for animation)")]
+        [Tooltip("死亡后游戏对象被摧毁的延迟(允许动画)")]
         public float DeathDuration = 0f;
 
 
@@ -63,10 +65,10 @@ namespace Unity.FPS.AI
         [Header("Sounds")] [Tooltip("Sound played when recieving damages")]
         public AudioClip DamageTick;
 
-        [Header("VFX")] [Tooltip("The VFX prefab spawned when the enemy dies")]
+        [Header("VFX")] [Tooltip("当敌人死亡时，VFX预制就产生了")]
         public GameObject DeathVfx;
 
-        [Tooltip("The point at which the death VFX is spawned")]
+        [Tooltip("死亡VFX产生的点")]
         public Transform DeathVfxSpawnPoint;
 
         [Header("Loot")] [Tooltip("The object this enemy can drop when dying")]
@@ -120,7 +122,7 @@ namespace Unity.FPS.AI
 
         void Start()
         {
-            m_EnemyManager = FindObjectOfType<EnemyManager>();
+            m_EnemyManager = FindObjectOfType<EnemyManager>();//返回场景中的所填类型的随机个体和集合
             DebugUtility.HandleErrorIfNullFindObject<EnemyManager, EnemyController>(m_EnemyManager, this);
 
             m_ActorsManager = FindObjectOfType<ActorsManager>();
@@ -202,7 +204,7 @@ namespace Unity.FPS.AI
 
         void Update()
         {
-            EnsureIsWithinLevelBounds();
+            EnsureIsWithinLevelBounds();//确保在水平范围内
 
             DetectionModule.HandleTargetDetection(m_Actor, m_SelfColliders);
 
@@ -341,15 +343,18 @@ namespace Unity.FPS.AI
         void OnDamaged(float damage, GameObject damageSource)
         {
             // test if the damage source is the player
+            //测试伤害源是否是玩家
             if (damageSource && !damageSource.GetComponent<EnemyController>())
             {
                 // pursue the player
+                //追击玩家
                 DetectionModule.OnDamaged(damageSource);
                 
                 onDamaged?.Invoke();
                 m_LastTimeDamaged = Time.time;
-            
+
                 // play the damage tick sound
+                //播放伤害滴答声
                 if (DamageTick && !m_WasDamagedThisFrame)
                     AudioUtility.CreateSFX(DamageTick, transform.position, AudioUtility.AudioGroups.DamageTick, 0f);
             
@@ -360,10 +365,12 @@ namespace Unity.FPS.AI
         void OnDie()
         {
             // spawn a particle system when dying
+            //在死亡时生成粒子系统
             var vfx = Instantiate(DeathVfx, DeathVfxSpawnPoint.position, Quaternion.identity);
             Destroy(vfx, 5f);
 
             // tells the game flow manager to handle the enemy destuction
+            //告诉游戏流程管理器处理敌人的破坏
             m_EnemyManager.UnregisterEnemy(this);
 
             // loot an object
@@ -373,6 +380,7 @@ namespace Unity.FPS.AI
             }
 
             // this will call the OnDestroy function
+            //这将调用OnDestroy函数
             Destroy(gameObject, DeathDuration);
         }
 

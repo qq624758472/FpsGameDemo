@@ -43,6 +43,7 @@ namespace Unity.FPS.AI
             DebugUtility.HandleErrorIfNullFindObject<ActorsManager, DetectionModule>(m_ActorsManager, this);
         }
 
+        //处理目标检测
         public virtual void HandleTargetDetection(Actor actor, Collider[] selfColliders)
         {
             // Handle known target detection timeout

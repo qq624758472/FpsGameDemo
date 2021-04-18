@@ -5,6 +5,7 @@ namespace Unity.FPS.UI
 {
     public class CompassElement : MonoBehaviour
     {
+        //罗盘元件
         [Tooltip("The marker on the compass for this element")]
         public CompassMarker CompassMarkerPrefab;
 

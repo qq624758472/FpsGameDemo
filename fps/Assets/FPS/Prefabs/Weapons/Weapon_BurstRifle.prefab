@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6502155279757849285}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,26 +171,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad90ba0b1477764da373f5ec01a8cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: 
-  WeaponIcon: {fileID: 0}
+  WeaponName: Burst Rifle
+  WeaponIcon: {fileID: 21300000, guid: cab1398a10b307b44b0ffeb0eef23254, type: 3}
   CrosshairDataDefault:
-    CrosshairSprite: {fileID: 0}
-    CrosshairSize: 0
-    CrosshairColor: {r: 0, g: 0, b: 0, a: 0}
+    CrosshairSprite: {fileID: 21300000, guid: e881aa18189b12f4e915fc5b14ddc421, type: 3}
+    CrosshairSize: 50
+    CrosshairColor: {r: 0.9811321, g: 0.96724814, b: 0.96724814, a: 0.3764706}
   CrosshairDataTargetInSight:
-    CrosshairSprite: {fileID: 0}
-    CrosshairSize: 0
-    CrosshairColor: {r: 0, g: 0, b: 0, a: 0}
-  WeaponRoot: {fileID: 0}
-  WeaponMuzzle: {fileID: 0}
-  ShootType: 0
-  ProjectilePrefab: {fileID: 0}
-  DelayBetweenShots: 0.5
-  BulletSpreadAngle: 0
+    CrosshairSprite: {fileID: 21300000, guid: e881aa18189b12f4e915fc5b14ddc421, type: 3}
+    CrosshairSize: 60
+    CrosshairColor: {r: 0.990566, g: 0.02339347, b: 0.014017418, a: 0.39607844}
+  WeaponRoot: {fileID: 3457424280582624703}
+  WeaponMuzzle: {fileID: 6502155279757849285}
+  ShootType: 1
+  ProjectilePrefab: {fileID: 8924682559891268397, guid: 3c6b27d949cdda749892906e1f1d1b27,
+    type: 3}
+  DelayBetweenShots: 0.05
+  BulletSpreadAngle: 0.5
   BulletsPerShot: 1
   RecoilForce: 1
-  AimZoomRatio: 1
-  AimOffset: {x: 0, y: 0, z: 0}
+  AimZoomRatio: 0.25
+  AimOffset: {x: 0, y: 0.13, z: 0}
   AutomaticReload: 1
   HasPhysicalBullets: 0
   ClipSize: 30
@@ -198,9 +199,9 @@ MonoBehaviour:
   EjectionPort: {fileID: 0}
   ShellCasingEjectionForce: 2
   ShellPoolSize: 1
-  AmmoReloadRate: 1
-  AmmoReloadDelay: 2
-  MaxAmmo: 8
+  AmmoReloadRate: 99999
+  AmmoReloadDelay: 0.7
+  MaxAmmo: 3
   AutomaticReleaseOnCharged: 0
   MaxChargeDuration: 2
   AmmoUsedOnStartCharge: 1
@@ -271,6 +272,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4d38a4c16d22ed45a2737e98d24e63a, type: 3}
+--- !u!1 &3457424280582624703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: b4d38a4c16d22ed45a2737e98d24e63a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3457424280582722335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3457424280583113119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b4d38a4c16d22ed45a2737e98d24e63a,

@@ -1,0 +1,10 @@
+[api-updater (non-obsolete-error-filter)] 2021/4/18 21:27:02 : Starting D:/U3D/2020.3.2f1c1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 1060.3048ms
+moved types parse time: 186ms
+candidates parse time : 1ms
+C# parse time         : 944ms
+candidates check time : 128ms
+console write time    : 21ms
+
