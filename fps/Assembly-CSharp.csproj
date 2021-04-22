@@ -67,8 +67,8 @@
     <Compile Include="Assets\ExplosiveLLC\Warrior FREE\Code\AnimatorParentMove.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringCollider.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
+    <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperStateMachine.cs" />
     <Compile Include="Assets\ExplosiveLLC\Warrior FREE\Code\WarriorMovementController.cs" />
     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Scripts\SimpleStateMachine.cs" />
@@ -83,8 +83,8 @@
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IKCtrlRightHand.cs" />
     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BSPTree.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs" />
-    <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperMath.cs" />
+    <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\AutoBlink.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />

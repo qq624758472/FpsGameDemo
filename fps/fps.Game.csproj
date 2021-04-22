@@ -310,8 +310,26 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Antlr3.RuntimePlastic">
+      <HintPath>Library\PackageCache\com.unity.plasticscm-cn@1.1.8-preview\Lib\Editor\Antlr3.RuntimePlastic.dll</HintPath>
+    </Reference>
     <Reference Include="System.IO.Compression.FileSystem">
       <HintPath>Library\PackageCache\com.unity.connect.share@4.1.1\Plugins\System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="antlr.runtimePlastic">
+      <HintPath>Library\PackageCache\com.unity.plasticscm-cn@1.1.8-preview\Lib\Editor\antlr.runtimePlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20Plastic">
+      <HintPath>Library\PackageCache\com.unity.plasticscm-cn@1.1.8-preview\Lib\Editor\Newtonsoft.Json.Net20Plastic.dll</HintPath>
+    </Reference>
+    <Reference Include="LibGit2SharpPlastic">
+      <HintPath>Library\PackageCache\com.unity.plasticscm-cn@1.1.8-preview\Lib\Editor\LibGit2SharpPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.plasticscm-cn@1.1.8-preview\Lib\Editor\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.plasticscm-cn@1.1.8-preview\Lib\Editor\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\U3D\2020.3.2f1c1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

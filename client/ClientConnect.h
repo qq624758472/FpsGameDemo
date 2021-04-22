@@ -18,11 +18,11 @@ using namespace std;
 
 
 //该结构体发送的是玩家位置。
-typedef struct _OtherPlayerlocation
+typedef struct _playerLocation
 {
     float x; //x轴世界坐标。
     float z; //y轴世界坐标。
-}OtherPlayerlocation;
+}playerLocation;
 
 
 /*网络链接类*/

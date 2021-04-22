@@ -1,3 +1,6 @@
+#ifndef _PLAYERINFO_
+#define _PLAYERINFO_
+
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,12 +16,15 @@
 #include <string.h>
 #include <sys/select.h>
 #include <pthread.h>
-#include "ClientConnect.h"
 using namespace std;
 
-int main(int argc, char *argv[])
+
+
+
+class playerInfo
 {
-    ClientConnect test;
-    test.port = 4399;
-    test.ClientConnectInit();
-}
+
+};
+
+
+#endif
